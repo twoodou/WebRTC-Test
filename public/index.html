@@ -2,14 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebRTC Demo</title>
+    <style>
+        video {
+            width: 320px;
+            height: 240px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <video id="localVideo" autoplay playsinline></video>
-    <video id="remoteVideo" autoplay playsinline></video>
-    <br>
-    <button id="startButton">Start</button>
-    <button id="callButton">Call</button>
+    <h1>WebRTC Demo</h1>
+    <div>
+        <video id="localVideo" autoplay playsinline></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+    <div>
+        <button id="startButton">Start</button>
+        <button id="callButton" disabled>Call</button>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
 </body>
